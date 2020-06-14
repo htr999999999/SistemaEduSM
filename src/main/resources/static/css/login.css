@@ -1,3 +1,46 @@
-*{
-    background-color:antiquewhite; /** IMAGEN **/ 
+body {
+    color: white;
+    background: url(../img/bene/shishigang.png) center top;
+    /*shishigang background*/
+}
+
+form {
+
+    width: 300px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20%;
+    position: relative;
+
+}
+
+form label {
+    width: 72px;
+    font-weight: bold;
+    display: inline;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid green;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: inline;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 1px solid green;
+    border-radius: 5px;
+    display: block;
+    color: aqua;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    color: violet;
 }

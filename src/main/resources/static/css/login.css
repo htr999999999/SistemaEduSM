@@ -44,3 +44,7 @@ form input[type="submit"]:hover {
     cursor: pointer;
     color: violet;
 }
+
+#h1login{
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <title>Title</title>
+    <title>Inicio</title>
 </head>
 
 <body>
@@ -19,26 +19,90 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand">San Martin</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="my-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Mis cursos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-2" aria-disabled="true">Nombre de usuario</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+
+            <a class="nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Link</a>
+
         </div>
+        <div class="mx-auto order-0"><a class="navbar-brand mx-auto" href="index.html">San Martin</a></div>
+        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-3 dual-collapse2"><a class="nav-item nav-link navbar-nav ml-auto " href="#"
+                th:text="'Bienvenido: ' +${user}">Home</a></div>
+
     </nav>
     <!--NAVBAR-->
+
+    <!--body-->
+    <div class="text-center">
+        <!--TODO
+        - Horario
+        -Interfaz de bienvenida
+        -SQL CONECTAR CON DB PARA REGISTAR USUARIOS Y PROFESORES
+        -->
+        <h1>ToDo<i class="fa fa-youtube" aria-hidden="true"></i> </h1>
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading"></h4>
+          <p>Horario</p>
+          <p class="mb-0"></p>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>Holy guacamole!</strong> Falta interfaz de venvenguds.
+        </div>
+        <div class="alert alert-primary" role="alert">
+            <strong>Falta crear base sql, conectar base sql para administrar personas, logins, passwords etc.</strong> <a href="#" class="alert-link"></a>
+        </div>
+        <button class="btn">
+                DESIGNAR PRIVILEGIOS <span class="badge badge-primary"></span>
+        </button>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center active">
+                Alumno/Profesor(pagina de overview)
+                <span class="badge badge-secondary badge-pill">pill1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                *Aula virtual*
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center active">
+                Zona de cursos
+                <span class="badge badge-secondary badge-pill">pill1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Horario en inicio
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center active">
+                Ver cursos/alumnp/profesor
+                <span class="badge badge-secondary badge-pill">pill1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                *Aula virtual* subir bajar archivos
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center active">
+                Zona de clase virtual (????????????????????????????????????????)
+                <span class="badge badge-secondary badge-pill">pill1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                --PROFESOR read/write administrar aula virtual, notas y +
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                --Estudiante read aula virtual, notas y+ 
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                --MUCHAS COSAS QUE AUN NO SE  <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <span class="badge badge-secondary badge-pill">pill2</span>
+            </li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

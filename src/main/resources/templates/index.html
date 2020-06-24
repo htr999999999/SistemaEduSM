@@ -27,11 +27,32 @@
 
         </div>
         <div class="mx-auto order-0"><a class="navbar-brand mx-auto" href="index.html">San Martin</a></div>
-        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-3 dual-collapse2"><a class="nav-item nav-link navbar-nav ml-auto " href="#"
-                th:text="'Bienvenido: ' +${user}">Home</a></div>
+        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-3 dual-collapse2"><a
+                class="nav-item nav-link navbar-nav ml-auto " href="#" th:text="'Bienvenido: ' +${user}">Home</a></div>
 
     </nav>
     <!--NAVBAR-->
+
+    <div class="container mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Num</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="persona:${personas}">
+                    <td th:text="${persona.idpersona}" >${id_persona}</td>
+                    <td th:text="${persona.dnipersona}">${dni_persona}</td>
+                    <td th:text="${persona.nombres}" >${persona.nombres}</td>
+                    <td th:text="${persona.apellidop}">${persona.apellidop}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!--body-->
     <div class="text-center">
@@ -40,11 +61,11 @@
         -Interfaz de bienvenida
         -SQL CONECTAR CON DB PARA REGISTAR USUARIOS Y PROFESORES
         -->
-        <h1>ToDo<i class="fa fa-youtube" aria-hidden="true"></i> </h1>
+        <!-- <h1>ToDo<i class="fa fa-youtube" aria-hidden="true"></i> </h1>
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading"></h4>
-          <p>Horario</p>
-          <p class="mb-0"></p>
+            <h4 class="alert-heading"></h4>
+            <p>Horario</p>
+            <p class="mb-0"></p>
         </div>
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -54,10 +75,11 @@
             <strong>Holy guacamole!</strong> Falta interfaz de venvenguds.
         </div>
         <div class="alert alert-primary" role="alert">
-            <strong>Falta crear base sql, conectar base sql para administrar personas, logins, passwords etc.</strong> <a href="#" class="alert-link"></a>
+            <strong>Falta crear base sql, conectar base sql para administrar personas, logins, passwords etc.</strong>
+            <a href="#" class="alert-link"></a>
         </div>
         <button class="btn">
-                DESIGNAR PRIVILEGIOS <span class="badge badge-primary"></span>
+            DESIGNAR PRIVILEGIOS <span class="badge badge-primary"></span>
         </button>
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center active">
@@ -93,14 +115,14 @@
                 <span class="badge badge-secondary badge-pill">pill2</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                --Estudiante read aula virtual, notas y+ 
+                --Estudiante read aula virtual, notas y+
                 <span class="badge badge-secondary badge-pill">pill2</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                --MUCHAS COSAS QUE AUN NO SE  <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                --MUCHAS COSAS QUE AUN NO SE <i class="fa fa-address-book-o" aria-hidden="true"></i>
                 <span class="badge badge-secondary badge-pill">pill2</span>
             </li>
-        </ul>
+        </ul> -->
     </div>
 
 </body>

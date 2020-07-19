@@ -14,8 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public class LoginAuthen {
 
+<<<<<<< HEAD
     @GetMapping({"/"})
     public String login() {
+=======
+    @GetMapping(path = "/")
+    public String login(){
+>>>>>>> dc93961128cf03c6aff4bc322b707616238db6d9
         return "login";
     }
 
@@ -39,3 +44,7 @@ public class LoginAuthen {
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dc93961128cf03c6aff4bc322b707616238db6d9

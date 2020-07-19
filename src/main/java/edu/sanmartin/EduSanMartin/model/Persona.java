@@ -7,11 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> dc93961128cf03c6aff4bc322b707616238db6d9
 @Entity
 @Table(name = "persona")
 public class Persona {

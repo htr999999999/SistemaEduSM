@@ -1,10 +1,10 @@
 package edu.sanmartin.EduSanMartin.model;
 
 public class Alumno extends Persona {
-    private Grado grado;
+    private int grado;
 
     public Alumno(int idPersona, int dniPersona, String nombres, String apellidoP, String apellidoM, String genero,
-            String rol, Grado grado) {
+            String rol, int grado) {
         super(idPersona, dniPersona, nombres, apellidoP, apellidoM, genero, rol);
         this.grado = grado;
     }
@@ -13,17 +13,17 @@ public class Alumno extends Persona {
         super();
     }
 
-    public Grado getGrado() {
-        return grado;
-    }
-
-    public void setGrado(Grado grado) {
-        this.grado = grado;
-    }
-
     @Override
     public String toString() {
         return "Alumno [grado=" + grado + "]";
+    }
+
+    public int getGrado() {
+        return grado;
+    }
+
+    public void setGrado(int grado) {
+        this.grado = grado;
     }
     
     

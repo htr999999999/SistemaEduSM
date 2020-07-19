@@ -9,7 +9,7 @@ public class Usuario extends Alumno{
     }
 
     public Usuario(int idPersona, int dniPersona, String nombres, String apellidoP, String apellidoM, String genero,
-            String rol, Grado grado) {
+            String rol, int grado) {
         super(idPersona, dniPersona, nombres, apellidoP, apellidoM, genero, rol, grado);
     }
 

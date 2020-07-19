@@ -2,35 +2,46 @@ package edu.sanmartin.EduSanMartin.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "persona")
 public class Persona {
-    private int idPersona;
-    private int dniPersona;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idpersona;
+    private int dnipersona;
     private String nombres;
-    private String apellidoP;
-    private String apellidoM;
-    private Date fechaNacimiento;
+    private String apellidop;
+    private String apellidom;
+    private Date fechanacimiento;
     private String genero;
     private String rol;
 
     public Persona(int idPersona, int dniPersona, String nombres, String apellidoP, String apellidoM,
             Date fechaNacimiento, String genero, String rol) { super();
-        this.idPersona = idPersona;
-        this.dniPersona = dniPersona;
+        this.idpersona = idPersona;
+        this.dnipersona = dniPersona;
         this.nombres = nombres;
-        this.apellidoP = apellidoP;
-        this.apellidoM = apellidoM;
-        this.fechaNacimiento = fechaNacimiento;
+        this.apellidop = apellidoP;
+        this.apellidom = apellidoM;
+        this.fechanacimiento = fechaNacimiento;
         this.genero = genero;
         this.rol = rol;
     }
 
     public Persona(int idPersona, int dniPersona, String nombres, String apellidoP, String apellidoM, String genero,
             String rol) {
-        this.idPersona = idPersona;
-        this.dniPersona = dniPersona;
+        this.idpersona = idPersona;
+        this.dnipersona = dniPersona;
         this.nombres = nombres;
-        this.apellidoP = apellidoP;
-        this.apellidoM = apellidoM;
+        this.apellidop = apellidoP;
+        this.apellidom = apellidoM;
         this.genero = genero;
         this.rol = rol;
     }
@@ -45,19 +56,19 @@ public class Persona {
     }
 
     public int getIdPersona() {
-        return idPersona;
+        return idpersona;
     }
 
     public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
+        this.idpersona = idPersona;
     }
 
     public int getDniPersona() {
-        return dniPersona;
+        return dnipersona;
     }
 
     public void setDniPersona(int dniPersona) {
-        this.dniPersona = dniPersona;
+        this.dnipersona = dniPersona;
     }
 
     public String getNombres() {
@@ -69,27 +80,27 @@ public class Persona {
     }
 
     public String getApellidoP() {
-        return apellidoP;
+        return apellidop;
     }
 
     public void setApellidoP(String apellidoP) {
-        this.apellidoP = apellidoP;
+        this.apellidop = apellidoP;
     }
 
     public String getApellidoM() {
-        return apellidoM;
+        return apellidom;
     }
 
     public void setApellidoM(String apellidoM) {
-        this.apellidoM = apellidoM;
+        this.apellidom = apellidoM;
     }
 
     public Date getFechaNacimiento() {
-        return fechaNacimiento;
+        return fechanacimiento;
     }
 
     public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechanacimiento = fechaNacimiento;
     }
 
     public String getGenero() {

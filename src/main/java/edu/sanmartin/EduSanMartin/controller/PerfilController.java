@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import edu.sanmartin.EduSanMartin.service.PerfilService;
 
 
+
 @Controller
 @RequestMapping("/perfil")
 
 public class PerfilController {
-    @Autowired
     private PerfilService PerfilService;
 
-    @RequestMapping(value={"/ver"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/wachar"}, method=RequestMethod.GET)
     public String ListarInfo(Model model) {
-        model.addAttribute("ver", PerfilService.lAlumnos());
-        return "ver_lista";
+        model.addAttribute("verIDalumnos", PerfilService.lAlumnos());
+        return "idlumnos";
     }
     
     

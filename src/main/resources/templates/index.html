@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <div th:replace="/layout :: header"></div>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="../static/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <title>Inicio</title>
-</head>
+  <body>
+    <div id="cabecera">
+      <div th:include="/layout :: navbar"></div>
+    </div>
 
-<body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-    <!--NAVBAR-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-
-            <a class="nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#" th:href="@{/persona/lista}">Link</a>
-
-        </div>
-        <div class="mx-auto order-0"><a class="navbar-brand mx-auto" href="index.html">San Martin</a></div>
-        <div class="navbar-nav mr-auto navbar-collapse collapse w-100 order-3 dual-collapse2"><a
-                class="nav-item nav-link navbar-nav ml-auto " href="usuario.html" th:href="@{/perfil/ver}"  th:text="'Bienvenido: ' +${user}">Home</a></div>
-
-    </nav>
     <!--NAVBAR-->
 
     <div class="container mt-4">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Num</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="persona:${personas}">
-                    <td th:text="${persona.idpersona}" >${id_persona}</td>
-                    <td th:text="${persona.dnipersona}">${dni_persona}</td>
-                    <td th:text="${persona.nombres}" >${persona.nombres}</td>
-                    <td th:text="${persona.apellidop}">${persona.apellidop}</td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Num</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="persona:${personas}">
+            <td th:text="${persona.idpersona}">${id_persona}</td>
+            <td th:text="${persona.dnipersona}">${dni_persona}</td>
+            <td th:text="${persona.nombres}">${persona.nombres}</td>
+            <td th:text="${persona.apellidop}">${persona.apellidop}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!--body-->
     <div class="text-center">
-       ->
+      ->
     </div>
-
-</body>
-
+  </body>
 </html>
